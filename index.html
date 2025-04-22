@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vaishnavi Narasimhan | Home</title>
+  <style>
+    
+    body {
+      font-family: Georgia, serif;
+      background-color: #ffffff;
+      color: #222222;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    header, nav, footer {
+      text-align: center;
+    }
+    nav {
+      margin: 20px 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1.2em;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .content {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    footer {
+      font-size: 1em;
+      margin-top: 30px;
+      padding-top: 10px;
+      border-top: 1px solid #ccc;
+      color: #444;
+    }
+
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+    }
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header><h1>Vaishnavi Narasimhan</h1></header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="experience.html">Experience</a>
+      <a href="education.html">Education</a>
+      <a href="performances.html">Performances</a>
+    </nav>
+    <div class="slideshow-container">
+      <div class="slide"><img src="newimg1.jpg" alt="Image 1"></div>
+      <div class="slide"><img src="newimg3.jpg" alt="Image 2"></div>
+      <div class="slide"><img src="newimg4.jpg" alt="Image 3"></div>
+    </div>
+    <footer>
+      <p>&copy; 2025 Vaishnavi Narasimhan. All rights reserved.</p>
+    </footer>
+  </div>
+  <script>
+    let slideIndex = 0;
+    function showSlides() {
+      let slides = document.querySelectorAll(".slide");
+      slides.forEach(slide => slide.style.display = "none");
+      slideIndex++;
+      if (slideIndex > slides.length) slideIndex = 1;
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+    showSlides();
+  </script>
+</body>
+</html>
